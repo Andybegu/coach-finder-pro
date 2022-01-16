@@ -3,7 +3,7 @@
     <h3>{{ fullName }}</h3>
     <h4>${{ rate }}/hour</h4>
     <div>
-      <base-badge v-for="area in areas" :key="area" :type="area" :title="area" ></base-badge>
+      <base-badge v-for="area in areas" :key="area" :type="area" :title="area"></base-badge>
     </div>
     <div class="actions">
       <base-button mode="outline" link :to="coachContactLink">Contact</base-button>
@@ -20,13 +20,13 @@ export default {
       return this.firstName + ' ' + this.lastName;
     },
     coachContactLink() {
-      return this.$route.path + '/' + this.id + '/contact' // /coaches/c1/contact
+      return this.$route.path + '/' + this.id + '/contact'; // /coaches/c1/contact
     },
     coachDetailsLink() {
       return this.$route.path + '/' + this.id; // /coaches/c1
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
